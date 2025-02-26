@@ -9,8 +9,51 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Payoo</title>
+    <title>Payoo-Login</title>
     <link rel="stylesheet" href="./src/output.css" />
   </head>
-  <body class="font-outfit"></body>
+  <body class="font-outfit bg-slate-800">
+    <section class="max-w-md min-h-screen mx-auto py-6 bg-gray-200">
+      <!-- INPUT FROM -->
+      <div
+        class="flex items-center justify-center mt-60 bg-white max-w-[400px] mx-auto rounded-[24px]"
+      >
+        <div class="py-[32px]">
+          <div class="flex flex-col max-w-[338px] gap-[8px]">
+            <label for="" class="text-[16px] text-[#080808]"
+              >Mobile Number</label
+            >
+            <input
+              id="ph-number"
+              type="number"
+              placeholder="Enter your number"
+              class="bg-gray-200 min-w-[338px] mb-2 py-[10px] pl-[20px] text-[14px] outline-none rounded-[32px]"
+              required
+            />
+          </div>
+
+          <div class="flex flex-col max-w-[338px] gap-[8px]">
+            <label for="" class="text-[16px] text-[#080808]">4 Digit Pin</label>
+            <input
+              value="1234"
+              id="pin-number"
+              type="number"
+              placeholder="Enter 4 Digit Pin"
+              class="bg-gray-200 min-w-[338px] py-[10px] pl-[20px] text-[14px] outline-none rounded-[32px]"
+              required
+            />
+          </div>
+          <!-- Button -->
+          <button
+            id="login-btn"
+            class="bg-[#0874F2] w-full text-white font-semibold text-[16px] rounded-[32px] py-[12px] mt-[14px] border border-[#0874F2] hover:bg-white transition-all duration-300 hover:text-[#080808]"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- javascript -->
+    <script src="./js/main.js"></script>
+  </body>
 </html>
