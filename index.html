@@ -22,9 +22,9 @@
             <div class="flex items-center gap-[8px]">
               <img src="./assets/Group.png" alt="payoo" class="w-[50px]" />
               <div class="">
-                <span class="text-[#080808] block font-extrabold text-[18px]"
-                  >$45000</span
-                >
+                <h1 class="text-[#080808] block font-extrabold text-[20px]">
+                  $<span id="balance">45000</span>
+                </h1>
                 <p class="mt-[3px] text-[rgba(8,8,8,0.5)]">Available Balance</p>
               </div>
             </div>
@@ -56,8 +56,9 @@
           <!-- Hero Content -->
           <div class="flex flex-col gap-3">
             <!-- Content -1 -->
-            <div class="flex justify-between flex-grow-0">
+            <div class="flex justify-between">
               <div
+                id="add-money"
                 class="border border-[rgba(8,8,8,0.5)] rounded-[12px] hover:border hover:border-[#0874F2] duration-200"
               >
                 <div
@@ -72,6 +73,7 @@
                 </div>
               </div>
               <div
+                id="cash-out"
                 class="border border-[rgba(8,8,8,0.5)] rounded-[12px] hover:border hover:border-[#0874F2] duration-200"
               >
                 <div
@@ -86,6 +88,7 @@
                 </div>
               </div>
               <div
+                id="transfer-money"
                 class="border border-[rgba(8,8,8,0.5)] rounded-[12px] hover:border hover:border-[#0874F2] duration-200"
               >
                 <div
@@ -101,8 +104,9 @@
               </div>
             </div>
             <!-- Content -2 -->
-            <div class="flex justify-between flex-shrink-0">
+            <div class="flex justify-between">
               <div
+                id="get-bonus"
                 class="border border-[rgba(8,8,8,0.5)] rounded-[12px] hover:border hover:border-[#0874F2] duration-200"
               >
                 <div
@@ -116,7 +120,9 @@
                   </p>
                 </div>
               </div>
+
               <div
+                id="pay-bill"
                 class="border border-[rgba(8,8,8,0.5)] rounded-[12px] hover:border hover:border-[#0874F2] duration-200"
               >
                 <div
@@ -130,7 +136,9 @@
                   </p>
                 </div>
               </div>
+
               <div
+                id="tarsaction"
                 class="border border-[rgba(8,8,8,0.5)] rounded-[12px] hover:border hover:border-[#0874F2] duration-200"
               >
                 <div
@@ -149,7 +157,7 @@
         </div>
       </section>
       <main class="py-9">
-        <section class="">
+        <section id="addmoney" class="">
           <div class="container">
             <h3 class="font-semibold text-[18px] mb-4">Add Money</h3>
             <!-- Input Section -->
@@ -172,10 +180,10 @@
                   >
                     Select Bank
                   </option>
-                  <option>Bkash</option>
-                  <option>Nagad</option>
-                  <option>Rocket</option>
-                  <option>Upai</option>
+                  <option value="Bkash">Bkash</option>
+                  <option value="Nagad">Nagad</option>
+                  <option value="Rocket">Rocket</option>
+                  <option value="Upai">Upai</option>
                 </select>
               </div>
 
@@ -184,6 +192,7 @@
                   >Bank Account Number</label
                 >
                 <input
+                  id="account-no"
                   type="number"
                   class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
                   placeholder="Enter 11 digit account number"
@@ -195,6 +204,7 @@
                   >Amount to Add</label
                 >
                 <input
+                  id="amount"
                   type="number"
                   class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
                   placeholder="Add Amount to withdraw"
@@ -206,12 +216,15 @@
                   >Pin Number</label
                 >
                 <input
+                  id="pin"
+                  value="1234"
                   type="number"
                   class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
                   placeholder="Enter 4 digit pin number"
                 />
               </div>
               <button
+                id="add-btn"
                 class="w-full bg-[#0874F2] text-[#ffffff] rounded-[32px] text-[18px] font-semibold py-[12px] mt-5"
               >
                 Add Money
@@ -219,7 +232,220 @@
             </div>
           </div>
         </section>
+
+        <!-- CASH-OUT SECTION -->
+        <section id="cashout">
+          <div class="container">
+            <h3 class="font-semibold text-[18px] mb-4">Add Money</h3>
+            <!-- Input Section -->
+            <div class="bg-white p-[20px] rounded-[24px]">
+              <div class="flex flex-col gap-2 mt-[8px]">
+                <label for="" class="text-[rgba(8,8,8,0.7)] text-[14px]"
+                  >Agent Number</label
+                >
+                <input
+                  id="account-no"
+                  type="number"
+                  class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
+                  placeholder="Enter 11 digit account number"
+                />
+              </div>
+
+              <div class="flex flex-col gap-2 mt-[8px]">
+                <label for="" class="text-[rgba(8,8,8,0.7)] text-[14px]"
+                  >Amount to Add</label
+                >
+                <input
+                  id="withdraw-amount"
+                  type="number"
+                  class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
+                  placeholder="Add Amount to withdraw"
+                />
+              </div>
+
+              <div class="flex flex-col gap-2 mt-[8px]">
+                <label for="" class="text-[rgba(8,8,8,0.7)] text-[14px]"
+                  >Pin Number</label
+                >
+                <input
+                  id="withdraw-pin"
+                  value="1234"
+                  type="number"
+                  class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
+                  placeholder="Enter 4 digit pin number"
+                />
+              </div>
+              <button
+                id="withdraw-btn"
+                class="w-full bg-[#0874F2] text-[#ffffff] rounded-[32px] text-[18px] font-semibold py-[12px] mt-5"
+              >
+                Withdraw Money
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Transfer Number -->
+        <section id="transferMoney">
+          <div class="container">
+            <h3 class="font-semibold text-[18px] mb-4">Add Money</h3>
+            <!-- Input Section -->
+            <div class="bg-white p-[20px] rounded-[24px]">
+              <div class="flex flex-col gap-2 mt-[8px]">
+                <label for="" class="text-[rgba(8,8,8,0.7)] text-[14px]"
+                  >User Account Number</label
+                >
+                <input
+                  id="account-no"
+                  type="number"
+                  class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
+                  placeholder="Enter 11 digit account number"
+                />
+              </div>
+
+              <div class="flex flex-col gap-2 mt-[8px]">
+                <label for="" class="text-[rgba(8,8,8,0.7)] text-[14px]"
+                  >Amount to Add</label
+                >
+                <input
+                  id="amount"
+                  type="number"
+                  class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
+                  placeholder="Add Amount to withdraw"
+                />
+              </div>
+
+              <div class="flex flex-col gap-2 mt-[8px]">
+                <label for="" class="text-[rgba(8,8,8,0.7)] text-[14px]"
+                  >Pin Number</label
+                >
+                <input
+                  id="pin"
+                  value="1234"
+                  type="number"
+                  class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
+                  placeholder="Enter 4 digit pin number"
+                />
+              </div>
+              <button
+                id="send-btn"
+                class="w-full bg-[#0874F2] text-[#ffffff] rounded-[32px] text-[18px] font-semibold py-[12px] mt-5"
+              >
+                Send Now
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Get Bonus -->
+        <section id="getBonus">
+          <div class="container">
+            <h3 class="font-semibold text-[18px] mb-4">Get Bonus</h3>
+            <!-- Input Section -->
+            <div class="bg-white p-[20px] rounded-[24px]">
+              <div class="flex flex-col gap-2 mt-[8px]">
+                <label for="" class="text-[rgba(8,8,8,0.7)] text-[14px]"
+                  >Enter Bonus Coupon</label
+                >
+                <input
+                  id="account-no"
+                  type="number"
+                  class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
+                  placeholder="Enter Your coupon"
+                />
+              </div>
+
+              <button
+                id="get-bonus-btn"
+                class="w-full bg-[#0874F2] text-[#ffffff] rounded-[32px] text-[18px] font-semibold py-[12px] mt-5"
+              >
+                Get Bonus
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- PayBill Section -->
+        <section id="payBill">
+          <div class="container">
+            <h3 class="font-semibold text-[18px] mb-4">Pay Bill</h3>
+            <!-- Input Section -->
+            <div class="bg-white p-[20px] rounded-[24px]">
+              <div class="flex flex-col gap-2">
+                <label for="" class="text-[rgba(8,8,8,0.7)] text-[14px]">
+                  Select back
+                </label>
+                <select
+                  name=""
+                  id=""
+                  class="bg-gray-200 py-[8px] px-[14px] rounded-[32px]"
+                >
+                  <option
+                    value=""
+                    class="text-[rgba(8,8,8,0.4)]"
+                    disabled
+                    selected
+                    hidden
+                  >
+                    Select Bank
+                  </option>
+                  <option value="Bkash">Bkash</option>
+                  <option value="Nagad">Nagad</option>
+                  <option value="Rocket">Rocket</option>
+                  <option value="Upai">Upai</option>
+                </select>
+              </div>
+
+              <div class="flex flex-col gap-2 mt-[8px]">
+                <label for="" class="text-[rgba(8,8,8,0.7)] text-[14px]"
+                  >Bank Account Number</label
+                >
+                <input
+                  id="account-no"
+                  type="number"
+                  class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
+                  placeholder="Enter 11 digit account number"
+                />
+              </div>
+
+              <div class="flex flex-col gap-2 mt-[8px]">
+                <label for="" class="text-[rgba(8,8,8,0.7)] text-[14px]"
+                  >Amount to Add</label
+                >
+                <input
+                  id="amount"
+                  type="number"
+                  class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
+                  placeholder="Add Amount to withdraw"
+                />
+              </div>
+
+              <div class="flex flex-col gap-2 mt-[8px]">
+                <label for="" class="text-[rgba(8,8,8,0.7)] text-[14px]"
+                  >Pin Number</label
+                >
+                <input
+                  id="pin"
+                  value="1234"
+                  type="number"
+                  class="bg-gray-200 py-[8px] px-[14px] rounded-[32px] outline-none"
+                  placeholder="Enter 4 digit pin number"
+                />
+              </div>
+              <button
+                id="add-btn"
+                class="w-full bg-[#0874F2] text-[#ffffff] rounded-[32px] text-[18px] font-semibold py-[12px] mt-5"
+              >
+                Pay Now
+              </button>
+            </div>
+          </div>
+        </section>
       </main>
     </section>
+    <!-- <script src="./js/index.js"></script> -->
+    <script src="./js/recap.js"></script>
+    <script src="./js/Toggle.js"></script>
+    <script src="./js/cashout.js"></script>
   </body>
 </html>
