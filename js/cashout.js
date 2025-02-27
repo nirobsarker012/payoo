@@ -6,15 +6,22 @@ document
     convertedPinNumber = parseInt(withdrawPinNumber);
     const withdrawAmountNumber =
       document.querySelector("#withdraw-amount").value;
-    convertedAmountNumber = parseInt(withdrawAmountNumber);
+    convertedWithdrawAmountNumber = parseInt(withdrawAmountNumber);
     const mainBalance = document.querySelector("#balance").innerText;
     convertedMainBalance = parseInt(mainBalance);
+    const withdrawAccountNumber =
+      document.querySelector("#withdraw-acc-no").value;
+    // convertedWithdrawAccountNumber = parseInt(withdrawAccountNumber);
 
     // condition
-    if (convertedPinNumber === 1234) {
-      const sum = convertedMainBalance - convertedAmountNumber;
-      document.querySelector("#balance").innerText = sum;
+    if (withdrawAccountNumber.length === 11) {
+      if (convertedPinNumber === 1234) {
+        const sum = convertedMainBalance - convertedWithdrawAmountNumber;
+        document.querySelector("#balance").innerText = sum;
+      } else {
+        alert("Incorrect Pin Number");
+      }
     } else {
-      alert("Invalid Pin or Account Number");
+      alert("Invalid Account Number");
     }
   });

@@ -1,3 +1,8 @@
+document.querySelector("#cashout").style.display = "none";
+document.querySelector("#transferMoney").style.display = "none";
+document.querySelector("#getBonus").style.display = "none";
+document.querySelector("#payBill").style.display = "none";
+
 document.querySelector("#add-money").addEventListener("click", function () {
   document.querySelector("#cashout").style.display = "none";
   document.querySelector("#addmoney").style.display = "block";
