@@ -9,7 +9,7 @@ document
     const convertedPin = parseInt(pinNumber); // Converted to pin string to number
     if (phNumber.length === 11) {
       if (convertedPin === 1234) {
-        window.location.href = "../index.html";
+        window.location.href = "./index.html";
       } else {
         alert("Invalid Pin Number");
       }
